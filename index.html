@@ -10,6 +10,17 @@
     <title>코리아 은행</title>
 </head>
 <body>
+
+  <div class="modal">
+    <div class="modal-wrap">
+      <h3>코리아은행 기업 서비스 개선 안내</h3>
+      <p>  코리아은행에서는 더 나은 금융서비스를 제공하고자 기업 금융서비스를 전면 개편하였습니다. 이번 개편을 통해 금융뿐만 아니라 고객 데이터 분석, 비금융 서비스 등을 제공하는 기업 종합금융 플랫폼으로 거듭나게 되었으며, 모든 금융계좌의 통합관리, 자금 수금 및 지급 실행 등 통합자금관리 서비스를
+        무료로 제공합니다.</p>
+        <div class="close">닫기 X</div>
+    </div>
+  </div>
+
+
     <!-- 전체 레이아웃 -->
     <div class="wrap">
          <!-- 상단 -->
@@ -91,7 +102,7 @@
                         <a href="#">공지사항</a>
                         <div class="notice">
                             <ul>
-                                <li>
+                                <li class="popup">
                                     <a href="#">
                                       대한은행 홈페이지 개편 안내
                                       <span>2022.03.01</span>
@@ -136,7 +147,7 @@
                           </div>
                     </li>
                  </ul>
-                 <div class="otherrap">
+                 <div class="otherWrap">
                 <!-- 배너 -->
                     <div class="banner">
                         <a href="#">
@@ -159,16 +170,23 @@
     </div>
     <footer class="footer">
         <div class="footer-inner">
-            <div class="logo-bottom">
+          <!-- 푸터 로고 -->
+            <div class="ft-logo">
+              <a href="#">
                 <img src="images/logo_bottom.png" alt="하단 로고">
+              </a>
             </div>
-            <div class="footer-right">
-                <ul>
+            <div class="ft-site">
+                <!-- 푸터의 메뉴 -->
+                 <div class="ft-menu">
+                  <ul>
                     <li><a href="#">하단메뉴1</a></li>
                     <li><a href="#">하단메뉴2</a></li>
                     <li><a href="#">하단메뉴3</a></li>
-                </ul>
-                <p>copyright@~~~</p>
+                  </ul>
+                </div>
+                <!-- 푸터의 카피라이트 -->
+                <div class="copy">COPYRIGHTⓒ by WEBDESIGN. ALL RIGHTS RESERVED</div>
             </div>
         </div>
     </footer>

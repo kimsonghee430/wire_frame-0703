@@ -19,6 +19,55 @@ a{
     display: block;
 }
 
+/* 모달창 */
+.modal{
+    width: 100%;
+    height: 100%;
+    position: fixed;
+    top: 0;
+    left: 0;
+    z-index: 999999;
+    background-color: rgba(0, 0, 0, 0.5);
+    display: none;
+  }
+/* 제이쿼리에서 클래스를 더해서 모달이 보이게 함 */
+  .modal.active{
+    display: block;
+  }
+
+  .modal-wrap{
+    width: 700px;
+    height: 500px;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50% , -50%);
+    background-color: #fff;
+    padding: 70px;
+    text-align: center;
+  }
+
+  .modal-wrap h3{
+    padding: 10px;
+  }
+
+  .modal-wrap p{
+    margin-top: 30px;
+    line-height: 1.5;
+  }
+
+  .close{
+      background-color: #ccc;
+      width: 100px;
+      padding: 5px;
+      position: absolute;
+      bottom: 30px;
+      right: 30px;
+      cursor: pointer;
+  }
+
+
+/* 전체 레이아웃 */
 .wrap{
     margin: auto;
     width: 100%;
@@ -79,15 +128,26 @@ header{
     background-color: blue;
 }
 
-/* .navi > li > a:hover + .submenu{
-    display: block;
+/* .navi > li > a:hover {
+  background-color: #117488;
 } */
+/* .navi:hover .submenu {
+  display: block;
+} */
+/* .navi > li > a:hover + .submenu{
+  display: block;
+ } */
+/* .navi > li:hover .submenu{
+  display: block;
+ } */
 
 .submenu{
     position: relative;
     background-color: #fff;
     z-index: 1;
     display: none;
+    width: 175px;
+    height: 200px;
 }
 
 .submenu > li > a{
@@ -114,13 +174,14 @@ header{
     position: relative;
     width: 1200px;
     height: 300px;
+    overflow: hidden;
 }
 
 .slidelist{
     position: relative;
     display: flex;
     height: 100%;
-    overflow: hidden;
+    /* overflow: hidden; */
 }
 
 .slidelist li{
@@ -221,10 +282,6 @@ header{
 }
 
 /* 갤러리 */
-.gallery{
-    
-
-}
 
 .gallery ul{
     padding: 20px 10px;
@@ -243,87 +300,101 @@ header{
     width: 100%;
 }
 /* 배너 바로가기*/
-.otherrap{
+.otherWrap{
+    width: calc(1200px - 395px);
     display: flex;
     position: relative;
+    /* background-color: tomato; */
 }
 
-.otherrap a{
-    position: relative;
+.banner,
+.shortcut {
+  width: 50%;
+  height: 200px;
+  position: relative;
+  overflow: hidden;
+  padding: 10px;
+}
+.banner a ,.shortcut a{
+  position: relative;
+ height: 100%;
+
+}
+.banner a h4 , .shortcut a h4 {
+  font-size: 15px;
+  color: #fff;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  padding:10px 30px;
+  background-color: rgba(0, 0, 0, 0.5);
+
+}
+.banner a img,.shortcut a img {
+  width: 100%;
+  height: 100%;
 }
 
-
-.banner a h4{
-    position: absolute;
-    top: 50%;
-    left: 50%;
-    transform: translate(-50% , -50%);
-    padding: 10px;
-    background: rgba(0, 0, 0, 0.5);
-    color: #fff;
-    
-}
-
-.shortcut a h4{
-    position: absolute;
-    top: 50%;
-    left: 50%;
-    transform: translate(-50% , -50%);
-    padding: 10px;
-    background: rgba(0, 0, 0, 0.5);
-    color: #fff;
-    
-}
-
-/* 하단 */
-footer{
+/* footer */
+.footer{
     width: 100%;
-    height: 120px;
-    background-color:rgb(6, 152, 219);
-    display: flex;
+    background-color: blue;
+    height: 100px;
+    
 }
-
 .footer-inner{
     width: 1200px;
-    height: 200px;
+    height: 100px;
     margin: auto;
+    background-color: #ccc;
     display: flex;
 }
 
-.logo-bottom{
-    width: 50%;
-    height: 120px;
-    background-color: blue;
-}
-.logo-bottom img{
-    display: block;
-    margin-top: 6px;
-    margin-left: 66px;
-}
-
-.footer-right{
-    width: 50%;
-    height: 120px;
-    background-color: blueviolet;
-    display: flex;
-    flex-direction: column;
-    justify-content: space-between;
-    text-align: center;
-    
-    
-}
-
-.footer-right ul{
-    margin: 0 auto;
-    display: flex;
-
-}
-.footer-right ul li a{
+/* ft-logo */
+.ft-logo{
+    width: 200px;
+    height: 100px;
     padding: 20px;
-    position: relative;
-    /* border-right: 1px solid #333; */
 }
 
-.footer-right p{
-    margin-bottom: 20px;
+.ft-logo a{
+    width: 100%;
+    height: 100%;
+}
+
+.ft-logo a img{
+    width: 100%;
+    height: 100%;
+
+}
+
+/* ft-site */
+.ft-site{
+    width: 1000px;
+    height: 100%;
+    background-color: chocolate;
+    text-align: center;
+}
+.ft-menu,.copy{
+    width: 100%;
+    height: 50px;
+    background-color: aquamarine;
+    color: #fff;
+    font-size: 14px;
+}
+.ft-menu ul{
+    margin: auto;
+    width: 50%;
+    display: flex;
+    justify-content: space-around;
+    padding-top: 15px;
+}
+
+.ft-menu ul li a{
+    font-size: 14px;
+    color: #fff;
+}
+.copy{
+    line-height: 50px;
 }
